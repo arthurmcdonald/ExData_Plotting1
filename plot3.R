@@ -11,7 +11,9 @@ df$Time <- times(df$Time)
 subset_df <- df[df$Date > as.Date("2007-01-31") & 
                   df$Date < as.Date("2007-02-03"), ]
 
+png(file="plot3.png", width=480, height=480)
 plot(subset_df$Time, subset_df$Sub_metering_1, type="l", col="black", 
      ylab="Energy sub metering")
 lines(subset_df$Time, subset_df$Sub_metering_2, col="red", type="l")
 lines(subset_df$Time, subset_df$Sub_metering_3, col="blue", type="l")
+dev.off()
