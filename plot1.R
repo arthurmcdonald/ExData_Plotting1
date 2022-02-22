@@ -11,7 +11,7 @@ df$Time <- times(df$Time)
 subset_df <- df[df$Date > as.Date("2007-01-31") & 
                   df$Date < as.Date("2007-02-03"), ]
 
-# plot the histogram and save to png
+# plot the chart and save to png
 png(file="plot1.png", width=480, height=480)
 hist(as.numeric(subset_df$Global_active_power), col="red", 
      main="Global Active Power", xlab="Global Active Power (killowatts)")
