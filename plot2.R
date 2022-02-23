@@ -14,5 +14,5 @@ subset_df <- df[df$Date > as.Date("2007-01-31") &
 png(file="plot2.png", width=480, height=480)
 plot(subset_df$Time, subset_df$Global_active_power, type="l", 
      ylab="Global Active Power (killowatts)", xlab="", xaxt='n')
-axis(1, at=c(0,0.5,1), labels=c("Thursday", "Friday", "Saturday"))
+axis(1, at=c(0,0.5,1), labels=c("Thu", "Fri", "Sat"))
 dev.off()
