@@ -14,8 +14,7 @@ subset_df$datetime <- as.POSIXlt.character(paste(subset_df$Date,
 
 png(file="plot3.png", width=480, height=480)
 plot(subset_df$datetime, subset_df$Sub_metering_1, type="l", col="black", 
-     ylab="Energy sub metering", xlab="", xaxt='n')
-axis(1, at=c(0,0.5,1), labels=c("Thu", "Fri", "Sat"))
+     ylab="Energy sub metering", xlab="")
 legend(x = "topright", legend=c("Sub_metering_1", "Sub_metering_2", 
                                 "Sub_metering_3"),
        bty = "n", lty=c(1,1,1),

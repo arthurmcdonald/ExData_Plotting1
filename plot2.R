@@ -14,6 +14,5 @@ subset_df$datetime <- as.POSIXlt.character(paste(subset_df$Date,
 
 png(file="plot2.png", width=480, height=480)
 plot(subset_df$datetime, subset_df$Global_active_power, type="l", 
-     ylab="Global Active Power (killowatts)", xlab="", xaxt='n')
-axis(1, at=c(0,0.5,1), labels=c("Thu", "Fri", "Sat"))
+     ylab="Global Active Power (killowatts)", xlab="")
 dev.off()
